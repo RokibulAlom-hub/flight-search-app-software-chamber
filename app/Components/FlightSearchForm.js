@@ -19,10 +19,12 @@ export default function FlightSearchForm({ onSearch }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     onSearch(formData);
+    console.log(formData);
+    
   };
 
   return (
-    <form onSubmit={handleSubmit} className="bg-white p-6 rounded-lg shadow-md mb-8">
+    <form onSubmit={handleSubmit} className="bg-white text-black p-6 rounded-lg shadow-md mb-8">
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
         <div>
           <label className="block text-sm font-medium">Origin</label>
@@ -80,7 +82,7 @@ export default function FlightSearchForm({ onSearch }) {
       </div>
       <button
         type="submit"
-        className="mt-4 w-full bg-blue-600 text-white p-2 rounded hover:bg-blue-700"
+        className="mt-4 w-full bg-green-600  text-white p-2 rounded"
       >
         Search Flights
       </button>

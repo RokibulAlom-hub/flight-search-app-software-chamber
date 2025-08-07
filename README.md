@@ -1,36 +1,58 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Flight Search App
 
-## Getting Started
+A flight search web application built with Next.js, pure JavaScript, Tailwind CSS, and the Amadeus Flight Offers API. Inspired by Skyscanner's clean design, it allows users to search for flights by entering origin, destination, departure date, and number of passengers.
 
-First, run the development server:
+## Features
+- Responsive form for flight search (origin, destination, date, passengers)
+- Displays flight results with airline, stops, price, and timing details
+- Mobile-friendly UI with Tailwind CSS
+- Server-side API route for secure Amadeus API calls
+- Error handling for invalid inputs or API failures
 
-```bash
+## Setup Instructions
+1. **Amadeus API Key**:
+   - Sign up for a free Amadeus Developer account at [https://developers.amadeus.com/](https://developers.amadeus.com/).
+   - Obtain your sandbox API key and secret.
+   - Create a `.env.local` file in the project root and add:
+     ```env
+     AMADEUS_API_KEY=your_api_key
+     AMADEUS_API_SECRET=your_api_secret
+     ```
+
+2. **Install Dependencies**:
+   ```bash
+   npm install
+
+
+Run the Development Server:
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000 to view the app.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Build for Production:
+npm run build
+npm run start
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+Screenshots
+(Add screenshots here after running the app, e.g., form and results on desktop and mobile)
+Deployment
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Push to a GitHub repository:git init
+git add .
+git commit -m "Initial commit"
+git branch -M main
+git remote add origin <your-repo-url>
+git push -u origin main
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+Optionally, deploy to Vercel for a live demo: Vercel Deployment Guide.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Notes
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Use valid 3-letter IATA codes for origin and destination (e.g., NYC, LAX).
+The departure date must be today or later.
+The Amadeus sandbox API is used for testing; switch to the production API for live use.
+
+
