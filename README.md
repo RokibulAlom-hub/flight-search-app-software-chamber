@@ -11,7 +11,7 @@ A flight search web application built with Next.js, pure JavaScript, Tailwind CS
 
 ## Setup Instructions
 1. **Amadeus API Key**:
-   - Sign up for a free Amadeus Developer account at [https://developers.amadeus.com/](https://developers.amadeus.com/).
+   - Sign up for a free Amadeus Developer account
    - Obtain your sandbox API key and secret.
    - Create a `.env.local` file in the project root and add:
      ```env
@@ -34,22 +34,10 @@ npm run build
 npm run start
 
 
-
-Screenshots
-(Add screenshots here after running the app, e.g., form and results on desktop and mobile)
-Deployment
-
-Push to a GitHub repository:git init
-git add .
-git commit -m "Initial commit"
-git branch -M main
-git remote add origin <your-repo-url>
-git push -u origin main
+3. **navbar footer popular section also added with whole resposive website**:
 
 
-Optionally, deploy to Vercel for a live demo: Vercel Deployment Guide.
 
-Notes
 
 Use valid 3-letter IATA codes for origin and destination (e.g., NYC, LAX).
 The departure date must be today or later.

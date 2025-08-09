@@ -32,7 +32,18 @@ export async function POST(request) {
     const { access_token } = await tokenResponse.json();
     console.log("this is access_token",access_token);
     
+    // Fetch flight offers 
+    const response = await fetch(
+      `https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=${origin}&destinationLocationCode=${destination}&departureDate=${departureDate}&adults=${passengers}&max=10`,
+      { headers: { Authorization: `Bearer ${access_token}` } }
+    );
+
     
+
+    const data = await response.json();
+    console.log("this is response and data",response,data);
+    
+    return NextResponse.json(data);
   } catch (error) {
     return NextResponse.json({ error: 'Failed to fetch flights' }, { status: 500 });
   }
