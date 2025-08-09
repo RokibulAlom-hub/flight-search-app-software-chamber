@@ -20,7 +20,7 @@ export default function PopularDestinations() {
       country: 'Australia',
       price: '$950',
       duration: '17h 20m',
-      image: 'https://images.unsplash.com/photo-1506973035872-a4ec6b683c1b',
+      image: 'https://unsplash.com/photos/people-on-marker-beside-road-KtJy7cZV5OQ',
     },
     {
       city: 'Rome',
@@ -68,12 +68,6 @@ export default function PopularDestinations() {
                 </h3>
                 <p className="text-gray-600 mt-1">From {dest.price}</p>
                 <p className="text-gray-600">Flight Duration: {dest.duration}</p>
-                <a
-                  href={`/search?destination=${dest.city.toUpperCase()}`}
-                  className="mt-4 inline-block bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition"
-                >
-                  Book Now
-                </a>
               </div>
             </div>
           ))}

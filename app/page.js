@@ -26,15 +26,17 @@ export default function Home() {
         body: JSON.stringify(formData),
       });
       const data = await response.json();
-      if (data.error) throw new Error(data.error);
+      
       setFlights(data.data || []);
+     
+      console.log(data);
     } catch (err) {
       setError("Failed to fetch flights. Please try again.");
     } finally {
       setLoading(false);
     }
   };
-  console.log("this is flight load data",flights)
+  // console.log("this is flight load data",flights)
   
   return (
     <>
